@@ -41,10 +41,19 @@ header .tagline h4 {
 
 header .tagline {
     /* TODO center the text */
-    background: rgba(34, 28, 18,.5); /* I added this transparent background bar for you. */
+    text-align: center;
+    background: rgba(34, 28, 18,.5); 
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    margin-bottom: 35%;
+    
+
+    /* I added this transparent background bar for you. */
     /* TODO add some padding to give it space around the text */
     /* TODO absolutely position the tagline bar at top: 35%. add a width so that it goes all the way across. */
     /* TODO when you make the slideshow work, the tagline will get hidden. why? what line of CSS do you have to write to make it appear ABOVE the slideshow? */
+z-index: 1;
 }
 
 
@@ -66,16 +75,27 @@ section {
 /* ---------------------------------------------- */
 
 .address {
+    background-color: #221c12;
+    color: #fffdf0;
+    text-align: center;
     /* TODO give this section a background of #221c12 and a color of #fffdf0. make the text centered */
 }
 
 .location,
 .hours {
+    padding-top: 35%;
+
     /* TODO give these two divs some padding so that they line up with the map */
 }
 
-.hours-label { /* TODO style these with the appropriate font styles (bold/italic) */ }
-.hours-value { /* TODO style these with the appropriate font styles (bold/italic) */ }
+.hours-label { 
+    font-style: bold;
+    /* TODO style these with the appropriate font styles (bold/italic) */ 
+}
+.hours-value { 
+    font-style: italic;
+    /* TODO style these with the appropriate font styles (bold/italic) */ 
+}
 
 
 
