@@ -10,7 +10,7 @@ body {
 }
 
 div, h1, h2, h3, h4, h5, h6, p, ul, ol, a {
-    font-family: Bitter;
+    font-family: Bitter, serif;
     /* TODO because we are using Foundation, we have to override Foundation's default font family. Use the Google Font 'Bitter' here. */
 }
 
@@ -23,11 +23,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Header --------------------------------------- */
 /* ---------------------------------------------- */
 
-header {}
+header {
+    position: relative;
+}
 
 header h1 {
     font-size: 4.5em;
     text-shadow: rgba(34, 28, 18,.75);
+    margin-bottom: 0;
     /* TODO make the font size larger than Foundation's default; I uesd 4.5em */
     /* TODO add a text-shadow on the h1 using rgba(34, 28, 18,.75) */
 }
@@ -46,7 +49,7 @@ header .tagline {
     padding: 10px;
     width: 100%;
     position: absolute;
-    margin-bottom: 35%;
+    top: 35%;
     
 
     /* I added this transparent background bar for you. */
@@ -67,6 +70,9 @@ section {
     padding: 2em;
     background: #ccc;
     line-height: 1.5em;
+    clear: both;
+    width: 100%;
+    float: left;
 }
 
 
@@ -104,23 +110,37 @@ section {
 /* ---------------------------------------------- */
 
 .menu {
+    color: #221c12;
+    background-color: #fffdf0;
+    padding-bottom: 3px;
     /* TODO give this section a color of #221c12 and a background of #fffdf0. give it some bottom padding so there's space below the text. */
 }
 
 .menu h2 {
+    font-size: 3em;
+    text-align: center;
     /* TODO make this font size larger than the Foundation default */
 }
 
 .menu h2, .menu h3, .menu h4 {
+    color:#221c12 ;
     /* TODO give these headers a color of #221c12 */
 }
-
 
 /* TODO center the text of the h2 and menu-section */
 
 .menu-section h3 a {
+    color: rgba(34, 28, 18, .75);
+    border-bottom: 3px;
+    padding-bottom: 1px;
+    transition: 1s all;
+
     /* TODO make menu section links a semi-transparent color rgba(34, 28, 18, .75). give them a 3px bottom border and give it a bit of space */
     /* TODO give the menu section links a CSS transition so that when you hover them, the color fades in slowly */
+}
+.menu-section h3 a:hover {
+    color: rgba(34, 28, 18, 1);
+
 }
 
 
@@ -129,14 +149,31 @@ section {
 /* TODO on the ACTIVE menu section links, make them look the same as hovered ones. How do you know if they are active? */
 
 .menu-section-content {
+    padding-bottom: 4px;
     /* TODO give this some space below the menu links */
 }
 
 
 .menu-item {
+    margin-bottom: 12px;
     /* TODO give each menu item some bottom margin */
 }
 
+.menu-item-dish {
+    font-weight: bold;
+}
+
+.menu-item-ingredients  {
+    font-style: italic;
+    display: inline;
+
+}
+
+.menu-item-price {
+    font-weight: bold;
+    opacity: .5;
+    display: inline;
+}
 /* TODO style the menu-item-dish to be bold */
 
 /* TODO style the menu-item-ingredients to be italic and be in one line with the price. You don't need to use Foundation classes to do this, but if you want to try and see, go for it! */
@@ -153,8 +190,19 @@ section {
 /* ---------------------------------------------- */
 
 .contact {
+    background: #221c12 url(../images/symbols-bottom.png);
+    background-repeat: no-repeat;
+    background-position: center -150px;
+    padding: 300px 0 100px 0;
     /* TODO add the dark brown background color, and the background image symbols-bottom. Change the background-position so that the bottom of it shows (where the symbols start to fade out). */
     /* TODO add some top and bottom padding so that the content doesn't overlap the background image. Note how the padding changes the location of the background image. */
+}
+.social-links img {
+    
+    padding-right: 10px;
+}
+.social-links a:last-child img{
+    padding: 0;
 }
 
 /* TODO make the .social-links links be displayed in a row with some space between them. make them 50% opacity, and fade to 100% opacity when you hover over them. */
