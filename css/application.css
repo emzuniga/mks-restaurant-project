@@ -129,7 +129,7 @@ section {
 
 /* TODO center the text of the h2 and menu-section */
 
-.menu-section h3 a {
+.menu-section h3 a{
     color: rgba(34, 28, 18, .75);
     border-bottom: 3px;
     padding-bottom: 1px;
